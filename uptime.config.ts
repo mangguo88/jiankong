@@ -24,9 +24,9 @@ const workerConfig = {
       name: 'My API Monitor',
       // `method` should be a valid HTTP Method
       method: 'POST',
-      // `target` is a valid URL
+      // `target` is a valid URL  
       target: 'https://example.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip  
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip    
       tooltip: 'This is a tooltip for this monitor'，  
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://example.com',
@@ -45,9 +45,9 @@ const workerConfig = {
       responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value  
-      checkLocationWorkerRoute: 'https://xxx.example.com',
+      checkLocationWorkerRoute: 'https://xxx.example.com'，  
     },
-    // Example TCP Monitor
+    // Example TCP Monitor  
     {    
       {
       id: '160706.xyz'，    
@@ -58,7 +58,7 @@ const workerConfig = {
       target: 'https://huggingface.co/spaces/mangguo88/qinglong'，        
       tooltip: 'My production server monitor'，          
       statusPageLink: 'https://809098.xyz'，  
-      timeout: 10000，  
+      timeout:5000，        
       }，       
   ]，  
   notification: {
