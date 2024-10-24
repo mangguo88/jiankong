@@ -29,7 +29,7 @@ const workerConfig = {
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip    
       tooltip: 'This is a tooltip for this monitor'，  
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://example.com'，  
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx  
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
@@ -49,17 +49,16 @@ const workerConfig = {
     },
     // Example TCP Monitor  
     {    
-      {
       id: '160706.xyz'，    
       name: '青龙面板'，  
       // `method` should be `TCP_PING` for tcp monitors
-      method: 'GET'，  
-      // `target` should be `host:port` for tcp monitors    
+      method: 'GET'，    
+      // `target` should be `host:port` for tcp monitors        
       target: 'https://huggingface.co/spaces/mangguo88/qinglong'，        
       tooltip: 'My production server monitor'，          
       statusPageLink: 'https://809098.xyz'，  
-      timeout:5000，        
-      }，       
+      timeout:5000，            
+   }，           
   ]，  
   notification: {
     // [Optional] apprise API server URL
