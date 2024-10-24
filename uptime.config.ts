@@ -10,10 +10,10 @@ const pageConfig = {
 }
 
 const workerConfig = {
-  // Write KV at most every 3 minutes unless the status changed
-  kvWriteCooldownMinutes: 3，  
-  // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
-  // passwordProtection: 'username:password',
+  // Write KV at most every 3 分钟之前 unless the status changed    
+  kvWriteCooldownMinutes: 3，        
+  // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`  
+  // passwordProtection: 'username:password',  
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
@@ -40,33 +40,24 @@ const workerConfig = {
         Authorization: 'Bearer YOUR_TOKEN_HERE'，  
       },
       // [OPTIONAL] body to be sent
-      body: 'Hello, world!',
+      body: 'Hello, world!'，  
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
+      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value  
       checkLocationWorkerRoute: 'https://xxx.example.com',
     },
     // Example TCP Monitor
     {    
-      id: 'lele.160706.xyz'，              
+      id: '160706.xyz'，                        
       name: '青龙面板'，  
-      // `method` should be `TCP_PING` for tcp monitors    
-      method: 'TCP_PING'，  
-      // `target` should be `host:port` for tcp monitors  
-      target: 'https://huggingface.co/spaces/mangguo88/qinglong'，  
-      timeout: 5000，  
-    },
-      {    
-      id: 'test_tcp_monitor'，  
-      name: '青龙面板'，  
-      // `method` should be `TCP_PING` for tcp monitors        
-      method: 'TCP_PING'，    
-      // `target` should be `host:port` for tcp monitors  
-      target: '1,2,3,4'，    
-      timeout: 5000，  
-    },
-  ],
+      // `method` should be `TCP_PING` for tcp monitors          
+      method: 'TCP_PING'，      
+      // `target` should be `host:port` for tcp monitors              
+      target: 'https://huggingface.co/spaces/mangguo88/qinglong'，              
+      timeout: 5000，          
+    }，  
+  ]，  
   notification: {
     // [Optional] apprise API server URL
     // if not specified, no notification will be sent  
