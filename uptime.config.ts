@@ -11,14 +11,14 @@ const pageConfig = {
 
 const workerConfig = {
   // Write KV at most every 3 minutes unless the status changed
-  kvWriteCooldownMinutes: 3,
+  kvWriteCooldownMinutes: 3，  
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
   // passwordProtection: 'username:password',
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
     {
-      // `id` should be unique, history will be kept if the `id` remains constant
+      // `id` should be unique, history will be kept if the `id` remains constant  
       id: 'foo_monitor',
       // `name` is used at status page and callback message
       name: 'My API Monitor',
@@ -27,7 +27,7 @@ const workerConfig = {
       // `target` is a valid URL
       target: 'https://example.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      tooltip: 'This is a tooltip for this monitor'，  
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://example.com',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx  
@@ -49,9 +49,9 @@ const workerConfig = {
     },
     // Example TCP Monitor
     {    
-      id: 'test_tcp_monitor'，  
+      id: 'lele.160706.xyz'，              
       name: '青龙面板'，  
-      // `method` should be `TCP_PING` for tcp monitors  
+      // `method` should be `TCP_PING` for tcp monitors    
       method: 'TCP_PING'，  
       // `target` should be `host:port` for tcp monitors  
       target: 'https://huggingface.co/spaces/mangguo88/qinglong'，  
@@ -60,7 +60,7 @@ const workerConfig = {
       {    
       id: 'test_tcp_monitor'，  
       name: '青龙面板'，  
-      // `method` should be `TCP_PING` for tcp monitors  
+      // `method` should be `TCP_PING` for tcp monitors        
       method: 'TCP_PING'，    
       // `target` should be `host:port` for tcp monitors  
       target: '1,2,3,4'，    
