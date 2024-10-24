@@ -26,7 +26,7 @@ const workerConfig = {
       method: 'POST',
       // `target` is a valid URL
       target: 'https://example.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip  
       tooltip: 'This is a tooltip for this monitor'，  
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://example.com',
@@ -49,14 +49,17 @@ const workerConfig = {
     },
     // Example TCP Monitor
     {    
-      id: '160706.xyz'，                        
+      {
+      id: '160706.xyz'，    
       name: '青龙面板'，  
-      // `method` should be `TCP_PING` for tcp monitors          
-      method: 'TCP_PING'，      
-      // `target` should be `host:port` for tcp monitors              
-      target: 'https://huggingface.co/spaces/mangguo88/qinglong'，                
-      timeout: 5000，          
-    }      
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'GET'，  
+      // `target` should be `host:port` for tcp monitors    
+      target: 'https://huggingface.co/spaces/mangguo88/qinglong'，        
+      tooltip: 'My production server monitor'，          
+      statusPageLink: 'https://809098.xyz'，  
+      timeout: 10000，  
+      }，       
   ]，  
   notification: {
     // [Optional] apprise API server URL
