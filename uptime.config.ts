@@ -54,9 +54,9 @@ const workerConfig = {
       // `method` should be `TCP_PING` for tcp monitors          
       method: 'TCP_PING'，      
       // `target` should be `host:port` for tcp monitors              
-      target: 'https://huggingface.co/spaces/mangguo88/qinglong'，              
+      target: 'https://huggingface.co/spaces/mangguo88/qinglong'，                
       timeout: 5000，          
-    }，  
+    }      
   ]，  
   notification: {
     // [Optional] apprise API server URL
